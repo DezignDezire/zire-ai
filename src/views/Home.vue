@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import TopicsSelect from "./TopicsSelect.vue";
+import TopicsSelect from './TopicsSelect.vue'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    TopicsSelect,
-  },
-};
+    TopicsSelect
+  }
+}
 </script>
