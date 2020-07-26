@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class='cardsFlicker'>
     <div v-for='topic in topics' :key='topic.name'>
-      <topic-card :topic='topic' />
+      <topic-card class="card" :topic='topic' />
     </div>
   </div>
 </template>
@@ -23,9 +23,27 @@ export default {
           'Transformer',
           'Consists of encoder and decoder',
           'transformer.png'
+        ),
+        new Topic(
+          'Attention',
+          'Mechanism for creating context between single words in NLP',
+          'deepL.jpg'
         )
       ]
     }
   }
 }
 </script>
+
+<style>
+.cardsFlicker {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  flex: 0 0 auto;
+}
+</style>
