@@ -1,3 +1,3 @@
 module.exports = {
-	publicPath: '/zire-ai/index.html'
+	publicPath: '/zire-ai/'
 }
