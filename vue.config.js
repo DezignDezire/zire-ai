@@ -1,3 +1,6 @@
 module.exports = {
-	publicPath: '/zire-ai/'
+	publicPath: process.env.NODE_ENV === 'production'
+    ? '/zire-ai/'
+    : '/'
+
 }
