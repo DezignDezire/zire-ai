@@ -20,3 +20,9 @@ export default {
   }
 }
 </script>
+
+<style>
+h2 {
+  padding: 20px 0;
+}
+</style>
