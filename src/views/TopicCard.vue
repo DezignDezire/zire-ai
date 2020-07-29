@@ -49,6 +49,7 @@ export default {
 
 h2 {
   margin: 4px 0 14px 0;
+  padding: 0 !important;
 }
 
 .topicImg {
