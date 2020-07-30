@@ -48,11 +48,12 @@ export default {
 }
 
 h2 {
-  margin: 4px 0 14px 0;
+  margin: 10px 0 15px 0 !important;
   padding: 0 !important;
 }
 
 .topicImg {
+  display: block; /* eliminates unwanted margin unterneath image */
   width: var(--box-size);
   height: var(--box-size);
   object-fit: cover;

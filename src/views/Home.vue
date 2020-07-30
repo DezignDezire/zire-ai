@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h2>exciting topics</h2>
-    <topics-select></topics-select>
+    <topics-select class="spacer"></topics-select>
     <div v-if="this.$store.state.selectedTopic == 'Word Embedding'">
       <word-embedding/>
     </div>
@@ -23,6 +23,10 @@ export default {
 
 <style>
 h2 {
-  margin: 20px 0 30px 0;
+  margin: 0 0 10px 0;
+}
+
+.spacer{
+  margin-bottom: 4rem;
 }
 </style>

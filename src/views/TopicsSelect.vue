@@ -1,7 +1,7 @@
 <template>
   <div class='cardsFlicker'>
     <div v-for='topic in topics' :key='topic.name' @click='topicSelected(topic.title)'>
-      <topic-card class="card" :topic='topic'/>
+      <topic-card :topic='topic'/>
     </div>
   </div>
 </template>
@@ -50,10 +50,6 @@ export default {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
-}
-
-.card {
-  flex: 0 0 auto;
 }
 
 .cardsFlicker::-webkit-scrollbar {

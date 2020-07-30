@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Our journey to general AI.</h1>
+    <h1>Jesus loves big, juicy neural nets.</h1>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
