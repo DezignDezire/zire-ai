@@ -8,7 +8,7 @@
     Given a certain word, its nearest-neighbour can easily be found. <br>
     <br>
     <h3>Skip-Gram Model</h3>
-    <img src="./word2vec.png" class="img">
+    <img src="./assets/word2vec.png" class="img">
     <br>
     It aims to predict the probability of context words given an input word. <br>
     By sliding a window over each word of a sentence, tuples of word and their neighboring words are created (dog, eats). <br>
@@ -42,7 +42,7 @@ export default {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 
 @media (max-width: 800px) {
