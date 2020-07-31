@@ -18,12 +18,21 @@
     <br>
     An arising problem is that the correct meaning of a word is defined by its surrounding context (bat ≠ bat).
     <br>
+
+    <button class="link2topic" v-on:click="topicSelected('BERT')">Go to BERT</button>
   </div>
 </template>
 
 <script>
+import store from '../../store'
+
 export default {
-  name: 'WordEmbedding'
+  name: 'WordEmbedding',
+  methods: {
+    topicSelected (topicTitle) {
+      store.dispatch('selectTopic', topicTitle)
+    }
+  }
 }
 </script>
 
@@ -45,6 +54,16 @@ export default {
     margin-bottom: 10rem;
 }
 
+.link2topic{
+    width: 150px;
+    height: 2rem;
+    display: block;
+    margin: 3rem auto 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #535353;
+    background-color: lightgreen;
+}
+
 @media (max-width: 800px) {
     .text{
         width: auto;
@@ -57,5 +76,4 @@ export default {
       width: 100%;
     }
 }
-
 </style>
