@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h2>exciting topics</h2>
     <topics-select class="spacer"></topics-select>
     <div v-if="this.$store.state.selectedTopic == 'Word Embedding'">
       <word-embedding/>

@@ -25,8 +25,8 @@ export default {
   data: function () {
     return {
       topics: [
-        new Topic('Deep Learning', 'Finds features by itself', 'logo.jpg'),
         new Topic('Word Embedding', 'Representation of context of single word in multi-dimensional space.', 'elmo.png'),
+        new Topic('BERT', 'Bidirectional Encoder Representations from Transformers', 'bert.jpg'),
         new Topic(
           'Transformer',
           'Consists of encoder and decoder',
