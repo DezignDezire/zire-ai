@@ -61,7 +61,7 @@ export default {
     margin: 3rem auto 0 auto;
     border-radius: 15px;
     box-shadow: 0 0 10px #535353;
-    background-color: lightgreen;
+    background-color: rgb(154, 255, 154);
 }
 
 @media (max-width: 800px) {
