@@ -30,12 +30,12 @@ export default {
         new Topic(
           'Transformer',
           'Consists of encoder and decoder',
-          'transformer.png'
+          'transformers.jpg'
         ),
         new Topic(
           'Attention',
           'Mechanism for creating context between single words in NLP',
-          'deepL.jpg'
+          'attention.jpg'
         )
       ]
     }
