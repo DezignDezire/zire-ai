@@ -11,12 +11,13 @@
       The main drawback of seq2seq is that the decoder only obtains the last hidden state of the encoder (a numerical summary of the entire input sentence in vector-form; red dots).
       The longer an input text is, the more inaccurate this vector representation gets, making the translation of entire paragraphs impossible. <br>
       <img src="./assets/Decoder.png" class='img' alt="Decoder&Encoder">
+      In order to avoid the process of forgetting we utilize the attention machanism.
       <button class="link2topic" v-on:click="navigate('Attention')">Go to Attention</button>
+      <br>
   </div>
 </template>
 
 <script>
-import store from '../../store'
 import Selector from '../Utilities/Selector.js'
 
 export default {

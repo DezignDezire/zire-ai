@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <topics-select class="spacer" id="topics-select1220"></topics-select>
     <div v-if="this.$store.state.selectedTopic == 'Word Embedding'">
       <word-embedding/>
@@ -13,6 +13,9 @@
     <div v-else-if="this.$store.state.selectedTopic == 'Attention'">
       <Attention/>
     </div>
+    <div v-else-if="this.$store.state.selectedTopic == 'GPT-3'">
+      <GPT_3/>
+    </div>
   </div>
 </template>
 
@@ -22,6 +25,7 @@ import WordEmbedding from './DeepTopics/WordEmbedding'
 import BERT from './DeepTopics/BERT'
 import Transformer from './DeepTopics/Transformer'
 import Attention from './DeepTopics/Attention'
+import GPT_3 from './DeepTopics/GPT-3'
 
 export default {
   name: 'Home',
@@ -30,14 +34,15 @@ export default {
     WordEmbedding,
     BERT,
     Transformer,
-    Attention
+    Attention,
+    GPT_3
   }
 }
 </script>
 
 <style scoped>
 h2 {
-  margin: 0 0 10px 0;
+  margin: 0 0 0px 0;
 }
 
 .spacer{

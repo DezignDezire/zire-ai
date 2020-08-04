@@ -7,7 +7,7 @@
     An attention layer is implemented like following: <br>
     Setup: create the encoder hidden states & first decoder hidden state (last encoder state serves as input in decoder)<br>
     <ol>
-        <li>calculate score for every encoder hidden state by taking the dot product of the decoder and the respective encoder hidden states (resulting in a scalar alignment-score for each input state)</li>
+        <li>calculate similarity score for every encoder hidden state by taking the dot product of the decoder and the respective encoder hidden states (resulting in a scalar alignment-score for each input state)</li>
         <li>perform a softmax-operation over each score [0;1] - high attention/alignment score: next output by the decoder is heavily influenced by this encoder hidden state</li>
         <li>weight every encoder hidden state (vector) by the softmax-result (scalar); we obtain the alignment vector</li>
         <li>sum up all alignment vectors to get the context vector</li>

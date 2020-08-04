@@ -3,21 +3,21 @@
     Neural networks cannot simply process words or images.
     They need a digit-vector representation of the input (e.g. obtained through word embedding). <br>
     <h2>Word Embedding</h2>
-    Words that appear next to each other (in sentences) are assigned a similar position in the vector space (e.g. the dog eats dogwood). <br>
+    Words that appear next to each other (in sentences) are assigned a similar position in the vector space (e.g. the dog eats dofwood). <br>
     The multi-dimensional representation allows one to measure the cosine-distance between words and therefore how “contextually similar” these words are.
     Given a certain word, its nearest-neighbour can easily be found. <br>
     <br>
     <h3>Skip-Gram Model</h3>
     <img src="./assets/word2vec.png" class="img">
-    It aims to predict the probability of context words given an input word. <br>
-    By sliding a window over each word of a sentence, tuples of word and their neighboring words are created (dog, eats). <br>
-    The model consists of an input and output vector with size of vocabulary and hidden vector with size of the models dimensions.
-    Input containing first word of tuple as one-hot encoded word representations and output containing second word respectively.
-    Throughout training process the weights of the matrixes W and W’ are trained using backpropagation. <br>
+    It aims to predict the contextual likelihood of a word given an input word.
+    By sliding a window over each word of a sentence, binary tuples of words and their surrounding words are generated. (dog, eats) <br>
+    During training these tuples serve as the input for each training-step. The input and output vectors of the model are of the size of the entire vocabulary
+    where only the two words of the currently processed tuple are set to 1 and all other words are set to 0 (a.k.a. one-hot encoded representation). <br>
     <br>
-    An arising problem is that the correct meaning of a word is defined by its surrounding context (bat ≠ bat).
+    The weights of the two matrices W & W’ are updated accordingly so that the first tuple value is placed more closely (in n-dim v-space)
+    to the second value of the tuple using backpropagation. <br>
     <br>
-
+    An arising problem is that the correct meaning of a word is defined by its surrounding context (bat ≠ bat).<br>
     <button class="link2topic" v-on:click="navigate('BERT')">Go to BERT</button>
   </div>
 </template>

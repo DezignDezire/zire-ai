@@ -9,7 +9,7 @@
 <script>
 import Topic from '../data/Topic'
 import TopicCard from './TopicCard.vue'
-import store from '../store'
+import Selector from './Utilities/Selector'
 
 export default {
   name: 'TopicsSelect',
@@ -19,7 +19,8 @@ export default {
   methods: {
     // update state to display selected topic
     topicSelected (topicTitle) {
-      store.dispatch('selectTopic', topicTitle)
+      const sel = new Selector()
+      sel.navigateToTopic(topicTitle)
     }
   },
   data: function () {
