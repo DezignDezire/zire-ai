@@ -1,6 +1,6 @@
 <template>
   <div class='cardsFlicker'>
-    <div v-for='topic in topics' :key='topic.name' @click='topicSelected(topic.title)'>
+    <div v-for='topic in topics' :id="'item-' + topic.title" :key='topic.tilte' @click='topicSelected(topic.title)'>
       <topic-card :topic='topic'/>
     </div>
   </div>
@@ -36,6 +36,11 @@ export default {
           'Attention',
           'Mechanism for creating context between single words in NLP',
           'attention.jpg'
+        ),
+        new Topic(
+          'GPT-3',
+          'generative pre-training model by OpenAI',
+          'openai.png'
         )
       ]
     }
@@ -46,10 +51,8 @@ export default {
 <style>
 .cardsFlicker {
   display: flex;
-  flex-wrap: nowrap;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
 }
 
 .cardsFlicker::-webkit-scrollbar {

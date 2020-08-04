@@ -11,19 +11,20 @@
       The main drawback of seq2seq is that the decoder only obtains the last hidden state of the encoder (a numerical summary of the entire input sentence in vector-form; red dots).
       The longer an input text is, the more inaccurate this vector representation gets, making the translation of entire paragraphs impossible. <br>
       <img src="./assets/Decoder.png" class='img' alt="Decoder&Encoder">
-      <button class="link2topic" v-on:click="topicSelected('Attention')">Go to Attention</button>
+      <button class="link2topic" v-on:click="navigate('Attention')">Go to Attention</button>
   </div>
 </template>
 
 <script>
 import store from '../../store'
+import Selector from '../Utilities/Selector.js'
 
 export default {
   name: 'Transformer',
   methods: {
-    topicSelected (topicTitle) {
-      document.getElementById('topics-select1220').scrollIntoView({ behavior: 'smooth', block: 'center' })
-      store.dispatch('selectTopic', topicTitle)
+    navigate (topicName) {
+      const sel = new Selector()
+      sel.navigateToTopic(topicName)
     }
   }
 }

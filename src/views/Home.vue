@@ -41,6 +41,6 @@ h2 {
 }
 
 .spacer{
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 </style>

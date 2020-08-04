@@ -18,19 +18,19 @@
     An arising problem is that the correct meaning of a word is defined by its surrounding context (bat ≠ bat).
     <br>
 
-    <button class="link2topic" v-on:click="topicSelected('BERT')">Go to BERT</button>
+    <button class="link2topic" v-on:click="navigate('BERT')">Go to BERT</button>
   </div>
 </template>
 
 <script>
-import store from '../../store'
+import Selector from '../Utilities/Selector.js'
 
 export default {
   name: 'WordEmbedding',
   methods: {
-    topicSelected (topicTitle) {
-      document.getElementById('topics-select1220').scrollIntoView({ behavior: 'smooth', block: 'center' })
-      store.dispatch('selectTopic', topicTitle)
+    navigate (topicName) {
+      const sel = new Selector()
+      sel.navigateToTopic(topicName)
     }
   }
 }

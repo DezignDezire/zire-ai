@@ -36,6 +36,7 @@ export default {
   border-radius: var(--radius);
   width: var(--box-size);
   margin: 10px;
+  scroll-snap-align: center;
 }
 
 .isActive {
