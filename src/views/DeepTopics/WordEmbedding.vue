@@ -62,6 +62,14 @@ export default {
     background-color: rgb(154, 255, 154);
 }
 
+.desc {
+  display: inline;
+}
+
+.combi {
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 800px) {
     .text{
         width: auto;

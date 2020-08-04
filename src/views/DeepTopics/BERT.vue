@@ -31,13 +31,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.desc {
-  display: inline;
-}
-
-.combi {
-  margin-bottom: 0.5rem;
-}
-</style>
