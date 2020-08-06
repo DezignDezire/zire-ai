@@ -30,12 +30,12 @@ export default {
         new Topic('BERT', 'Bidirectional Encoder Representations from Transformers', 'bert.jpg'),
         new Topic(
           'Transformer',
-          'Consists of encoder and decoder',
+          'transforms an input sequence (source) to a new one (target)',
           'transformers.jpg'
         ),
         new Topic(
           'Attention',
-          'Mechanism for creating context between single words in NLP',
+          'the mechanism of selectively concentrating on one or a few things while ignoring others',
           'attention.jpg'
         ),
         new Topic(
