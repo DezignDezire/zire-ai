@@ -1,6 +1,6 @@
 <template>
   <div class="text">
-    <h2>Attention</h2>
+    <h2>Attention 👀</h2>
     In the context of NLP attention is used to filter out the most relevant encoder hidden states (input words) for every output word in order to help memorize long source sequences.
     Therefore not only a single context vector (outputted by the encoders last hidden state) is built, but also shortcuts between the input source and the context vector are created.
     The context vector consists of the encoder hidden states, the decoder hidden states and the alignment between source and target. <br>
@@ -19,7 +19,7 @@
     Obtaining the context vector is as easy as:
     <ol>
         <li>for every input feature vector H_i we calculate the amount of “attention” the output y pays to H_i. <br>
-        More details about the alignment/score function follow down below
+        More details about the alignment/score function follow down below... 🔜
         </li>
         <li>perform a softmax-operation over each score [0;1] (sum of all scores add up to 1)</li>
         <li>weight every encoder hidden state (vector) by the softmax-result (scalar); we obtain the <u>alignment vector</u></li>
@@ -33,7 +33,7 @@
     there are several ways to determine how heavily the next decoder output is influenced by an encoder hidden state:
     <ul>
       <li>in the model architecture (graphic above) the alignment score is determined by iteratively taking the dot product of the previous decoder state s_t-1 and the respective encoder feature vectors</li>
-      <li>instead of taking the dot product it has shown to be efficient to construct a primitive single-laver neural network with the same two inputs.
+      <li>instead of taking the dot product it has shown to be efficient to construct a feed-forward network with a single hidden layer using the same two inputs.
         Training the mini-model with gradient descent it will learn automatically to detect the most relevant encoder states</li>
     </ul>
     In order to reduce computation we can precompute an alignment model which serves as a lookup matrix of size T_x · T_y.
