@@ -16,6 +16,7 @@
     <div v-else-if="this.$store.state.selectedTopic == 'GPT-3'">
       <GPT_3/>
     </div>
+    <Comment/>
   </div>
 </template>
 
@@ -26,11 +27,13 @@ import BERT from './DeepTopics/BERT'
 import Transformer from './DeepTopics/Transformer'
 import Attention from './DeepTopics/Attention'
 import GPT_3 from './DeepTopics/GPT-3'
+import Comment from './Comment'
 
 export default {
   name: 'Home',
   components: {
     TopicsSelect,
+    Comment,
     WordEmbedding,
     BERT,
     Transformer,

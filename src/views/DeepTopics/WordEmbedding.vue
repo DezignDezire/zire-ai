@@ -49,14 +49,14 @@ export default {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
 }
 
 .link2topic{
-    width: 150px;
     height: 2rem;
     display: block;
     margin: 3rem auto 0 auto;
+    padding: 0 2rem 0 2rem;
     border-radius: 15px;
     box-shadow: 0 0 10px #535353;
     background-color: rgb(154, 255, 154);
@@ -73,7 +73,7 @@ export default {
 @media (max-width: 800px) {
     .text{
         width: auto;
-        margin: 1rem 1rem 5rem 1rem;
+        margin: 1rem 1rem 2rem 1rem;
     }
 }
 

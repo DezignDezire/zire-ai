@@ -4,7 +4,7 @@
       Transformers are a cornerstone of Neural Machine Translation (NMT). They are trained by inputting the same sentence in two different languages.
       That’s it! The transformer does the rest. <br>
       <br>
-      Up until recent the state of the art in NMT was the <strong>seq2seq</strong> architecture which consists of two RNNs: Encoder & Decoder.
+      Up until recent the state of the art in NMT was the <strong>seq2seq</strong> architecture which consists of two <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">RNNs</a>: Encoder & Decoder.
       The encoder reads the input words one by one to obtain a vector representation of a fixed dimensionality (e.g. 512 dimensions)
       - a.k.a. sequence embedding or “thought vector”). <br>
       The output words are extracted one by one using the decoder. <br>
