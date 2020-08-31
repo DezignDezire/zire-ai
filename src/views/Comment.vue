@@ -33,6 +33,9 @@ export default {
     createComment () {
       try {
         this.CommentService.createComment(this.userName, this.commentText)
+        alert('Comment successfully posted. thanks 🦾')
+        this.userName = undefined
+        this.commentText = undefined
       } catch (err) {
         alert(err.message)
       }
@@ -54,7 +57,7 @@ export default {
 .fullWidth{
   margin-top: 1rem;
   height: auto;
-  width: 100%;
+  width: 98%;
   min-height: 50px;
 }
 
